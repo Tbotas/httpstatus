@@ -15,17 +15,23 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="./index.html">Super_TP</a>
+                <a class="navbar-brand" href="../">Super_TP</a>
             </div>
             <ul class="nav navbar-nav">
                 <li><a href="../">Liste des sites</a></li>
+                <?php if (!$logged) { ?>
                 <li><a href="../connexion">Connexion</a></li>
-                <li><a href="../ajoutersite">Ajouter un site</a></li>
+                <?php } else {?>
+                <li><a href="../deconnexion">Deconnexion</a></li>
+                <?php } ?>
+                <?php if ($admin) { ?>
+                <li class = "active"><a href="../ajoutersite">Ajouter un site</a></li>
+                <?php } ?>
             </ul>
         </div>
     </nav>
 
-    <h1 style="text-align: center">URL DU SITE: *url*</h1>
+    <h1 style="text-align: center">URL DU SITE: <?php $this->s($website['url_site']) ?></h1>
 
     <div id="liste-historique">
         <ul>

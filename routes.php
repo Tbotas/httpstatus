@@ -2,10 +2,13 @@
     $routes = array(
 			'Httpstatus' => [
 				'home' => '/',
-				'ajouterside' => '/ajoutersite',
+				'ajoutersite' => '/ajoutersite',
 				'connexion' => '/connexion',
 				'historique' => '/historique/{id}',
 				'login' => '/login',
+				'deconnexion' => '/deconnexion',
+				'supprimer' => '/supprimer/{id}',
+				'add_website' => '/add_website'
 			],
 			'Api' => [
 				'endpoint' => '/api',

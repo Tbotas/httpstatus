@@ -28,13 +28,14 @@ class ModelApi extends \Model {
     }
 
     public function get_user_with_creds($mail, $pass) {
-        $user = $this->get('users', [
+        $user = $this->get_one('users', [
             'email' => $mail,
         ]);
-
-        if ($user['password'] == md5($pass . $user['salt'])) {
+        
+        if ($user['pass'] == md5($pass . $user['salt'])) {
             return $user;
         }
+
         return null;
     }
 
