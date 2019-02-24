@@ -26,6 +26,3 @@ CREATE TABLE IF NOT EXISTS history_site (
 );
 
 INSERT INTO users VALUES(1, 'deschaussettes@yopmail.com', MD5(RAND()), MD5(CONCAT('password', salt)), 'abcdefghjaimelesapis', true);
-
-INSERT INTO sites VALUES(1, 'https://google.com');
-INSERT INTO sites VALUES(2, 'https://jolisite.com');
